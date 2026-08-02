@@ -1,0 +1,112 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.symbolica.ai/guides/operational-errors
+format: exception-hierarchy
+envelope: >-
+  Errors surface as typed exceptions in the SDK runtime. All SDK errors inherit from
+  AgenticaError (Python: agentica.errors; TypeScript: @symbolica/agentica/errors). The
+  platform retries transient operational failures with exponential backoff + jitter, so
+  only unrecoverable errors reach application code.
+categories:
+  - name: base
+    errors:
+      - code: AgenticaError
+        message: Base exception for all Agentica SDK errors.
+      - code: ServerError
+        parent: AgenticaError
+        message: Base class for errors during remote operations.
+      - code: GenerationError
+        parent: ServerError
+        message: Base class for errors during agent generation.
+      - code: InferenceError
+        parent: GenerationError
+        message: Base class for HTTP errors from the inference service.
+  - name: connection
+    errors:
+      - code: ConnectionError
+        parent: AgenticaError
+        message: General connection failure.
+      - code: WebSocketConnectionError
+        parent: ConnectionError
+        message: WebSocket connection failed or was interrupted.
+      - code: WebSocketTimeoutError
+        parent: ConnectionError
+        message: WebSocket connection timed out.
+  - name: invocation
+    errors:
+      - code: InvocationError
+        parent: AgenticaError
+        message: General error during agent invocation.
+      - code: TooManyInvocationsError
+        parent: InvocationError
+        message: Exceeded maximum number of invocations.
+      - code: NotRunningError
+        parent: InvocationError
+        message: Attempted to use an agent that is not running.
+  - name: generation
+    errors:
+      - code: MaxTokensError
+        parent: GenerationError
+        message: Response exceeded maximum token limit.
+      - code: ContentFilteringError
+        parent: GenerationError
+        message: Content was filtered by safety systems.
+  - name: inference
+    errors:
+      - code: APIConnectionError
+        parent: InferenceError
+        message: Failed to connect to the inference API.
+      - code: APITimeoutError
+        parent: InferenceError
+        message: Inference API request timed out.
+      - code: RateLimitError
+        parent: InferenceError
+        http_status: 429
+        message: Rate limit exceeded, slow down requests.
+      - code: BadRequestError
+        parent: InferenceError
+        http_status: 400
+        message: Request was malformed or invalid.
+      - code: UnauthorizedError
+        parent: InferenceError
+        http_status: 401
+        message: Authentication failed or missing.
+      - code: PermissionDeniedError
+        parent: InferenceError
+        http_status: 403
+        message: Insufficient permissions.
+      - code: NotFoundError
+        parent: InferenceError
+        http_status: 404
+        message: Requested resource not found.
+      - code: ConflictError
+        parent: InferenceError
+        http_status: 409
+        message: Request conflicts with current state.
+      - code: UnprocessableEntityError
+        parent: InferenceError
+        http_status: 422
+        message: Request understood but cannot be processed.
+      - code: RequestTooLargeError
+        parent: InferenceError
+        message: Request payload too large for inference service.
+      - code: InternalServerError
+        parent: InferenceError
+        http_status: 500
+        message: Internal server error.
+      - code: ServiceUnavailableError
+        parent: InferenceError
+        http_status: 503
+        message: Service temporarily unavailable.
+      - code: OverloadedError
+        parent: InferenceError
+        message: Inference service is overloaded, try again later.
+      - code: DeadlineExceededError
+        parent: InferenceError
+        message: Operation exceeded its deadline.
+agent_errors:
+  docs: https://docs.symbolica.ai/guides/agent-errors
+  description: >-
+    Distinct from operational errors: agent errors are exceptions the agent intentionally
+    raises based on your business logic (custom exception classes, builtin exceptions, or
+    result/None-union return types). Handled in application code, not by platform retries.

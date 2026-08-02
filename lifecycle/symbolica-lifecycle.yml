@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.symbolica.ai/llms.txt
+product: Agentica SDK
+versioning:
+  scheme: semver
+  current: 0.4.0
+  changelog: https://docs.symbolica.ai/llms.txt
+  see: changelog/symbolica-changelog.yml
+license:
+  spdx: MIT
+  since: 0.4.0
+  applies_to:
+    - Agentica Python SDK
+    - Agentica TypeScript SDK
+    - Agentica Server
+    - Agentica Internal Libraries
+support:
+  reporting_bugs: https://docs.symbolica.ai/guides/reporting-bugs
+  contact_email: hello@symbolica.ai
+  github: https://github.com/symbolica-ai
+deprecation:
+  policy_url: null
+  note: No formal deprecation/sunset policy published (pre-1.0 SDK on SemVer).
+status_page: null
+sla:
+  url: null
+notes: >-
+  Pre-1.0 SDK-first product. Release notes are the primary lifecycle signal (v0.3.0 first
+  public release through v0.4.0). No public status page, SLA, or deprecation policy found at
+  time of enrichment.

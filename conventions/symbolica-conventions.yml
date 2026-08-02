@@ -1,0 +1,55 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.symbolica.ai
+authentication:
+  style: platform-api-key
+  detail: Single Agentica Platform API key via environment variable (see authentication/symbolica-authentication.yml).
+integration_model:
+  style: sdk-first
+  detail: >-
+    Direct SDK integration ("Un-MCP") rather than a REST API. Agents and agentic functions
+    are defined in Python or TypeScript; the SDK executes them against the Symbolica Platform
+    (sandboxed REPL + inference). Python and TypeScript objects/modules are "warped" by
+    reference or by value into agent REPLs.
+streaming:
+  supported: true
+  detail: >-
+    Responses stream as chunks. Python uses StreamLogger; TypeScript uses a listener
+    callback. Chunk.type values include reasoning, output_text, and usage. Token usage
+    (including cached and reasoning tokens) is exposed via ResponseUsage.
+  docs: https://docs.symbolica.ai/concepts/logging_and_streaming/python.md
+mcp_interop:
+  style: un-mcp
+  detail: >-
+    The Agentica Python SDK consumes external MCP servers (local or remote) by turning MCP
+    tools back into regular functions for use inside the agent REPL. Symbolica does not
+    publish a first-party hosted MCP server; MCP is an inbound compatibility layer.
+  docs: https://docs.symbolica.ai/concepts/unmcp.md
+error_handling:
+  operational_vs_agent: >-
+    Operational errors (platform/network/inference) are retried automatically with
+    exponential backoff and jitter; only unrecoverable ones reach code. Agent errors are
+    intentionally raised by the agent from business logic. All SDK errors inherit from
+    AgenticaError.
+  docs: https://docs.symbolica.ai/guides/operational-errors
+  see: errors/symbolica-error-codes.yml
+retries:
+  strategy: exponential-backoff-with-jitter
+  scope: transient operational failures (inference rate limits, network, service unavailable)
+  handled_by: platform
+token_controls:
+  max_tokens: Configurable per agent/agentic function; MaxTokens supports per_invocation, per_round, and rounds.
+  reasoning_effort: "none | minimal | low | medium | high | xhigh (thinking budget for reasoning models)"
+  cache_ttl: Controls Anthropic prompt cache duration.
+human_in_the_loop:
+  supported: true
+  docs: https://docs.symbolica.ai/guides/human-in-the-loop
+idempotency:
+  supported: false
+  note: No idempotency-key contract is documented for the SDK/platform surface.
+versioning:
+  scheme: semver
+  see: lifecycle/symbolica-lifecycle.yml
+notes: >-
+  Cross-links: authentication/, errors/, lifecycle/. No pagination or REST rate-limit-header
+  conventions apply because there is no documented REST resource surface.

@@ -1,0 +1,41 @@
+# Agentica SDK
+
+## Docs
+
+- [v0.3.0](https://docs.symbolica.ai/changes/0.3.0_release.md): First public release of the Agentica SDK
+- [v0.3.1](https://docs.symbolica.ai/changes/0.3.1.md): Changes from v0.3.0 to v0.3.1
+- [v0.3.2](https://docs.symbolica.ai/changes/0.3.2.md): Changes from v0.3.1 to v0.3.2
+- [v0.4.0](https://docs.symbolica.ai/changes/0.4.0.md): Changes from v0.3.2 to v0.4.0
+- [Agent](https://docs.symbolica.ai/concepts/agent.md): Use the Agentica SDK to build agents.
+- [Agentic Functions](https://docs.symbolica.ai/concepts/agentic.md): Use agentic to execute any function with an agent.
+- [Agentic Functions vs Agents](https://docs.symbolica.ai/concepts/agentic-vs-agents.md): Understanding when to use each pattern
+- [How It Works](https://docs.symbolica.ai/concepts/how-it-works.md): Understanding the execution model
+- [Python](https://docs.symbolica.ai/concepts/logging_and_streaming/python.md): Learn how to log and stream agents and agentic functions in Python.
+- [TypeScript](https://docs.symbolica.ai/concepts/logging_and_streaming/typescript.md): Learn how to log and stream agents and agentic functions in TypeScript.
+- [Scope](https://docs.symbolica.ai/concepts/scope.md): The unified interface for functions, state, and types
+- [Un-MCP](https://docs.symbolica.ai/concepts/unmcp.md)
+- [Agent Errors](https://docs.symbolica.ai/guides/agent-errors.md): Handle custom exceptions raised by agents
+- [Best Practices](https://docs.symbolica.ai/guides/best-practices.md): Production-ready guidelines for building with the Agentica SDK
+- [Example Projects & Walk-throughs](https://docs.symbolica.ai/guides/examples.md): A walk-through of the Agentica SDK's features by example.
+- [Human-in-the-Loop](https://docs.symbolica.ai/guides/human-in-the-loop.md): Maintain oversight and control in agentic applications
+- [Building Multi-Agent Systems](https://docs.symbolica.ai/guides/multi-agent-systems.md): Orchestrate multiple agents to solve complex problems
+- [Operational Errors](https://docs.symbolica.ai/guides/operational-errors.md): Handle platform-level failures in agent operations
+- [Prompting](https://docs.symbolica.ai/guides/prompting.md)
+- [Reporting bugs](https://docs.symbolica.ai/guides/reporting-bugs.md): Reporting bugs that you encounter with the Agentica SDK
+- [Introduction](https://docs.symbolica.ai/index.md): Build agentic applications with the Agentica SDK
+- [Claude Code](https://docs.symbolica.ai/integrations/claude-code.md): Build with Claude Code and the Agentica SDK
+- [GitHub Copilot](https://docs.symbolica.ai/integrations/copilot.md): Build with GitHub Copilot and the Agentica SDK
+- [Cursor](https://docs.symbolica.ai/integrations/cursor.md): Build with Cursor and the Agentica SDK
+- [Agent](https://docs.symbolica.ai/prompting/agent.md)
+- [Agentic](https://docs.symbolica.ai/prompting/agentic.md)
+- [Quickstart](https://docs.symbolica.ai/quickstart.md): Build your first agent with the Agentica SDK
+- [Listeners](https://docs.symbolica.ai/references/python/agent_listener.md)
+- [Loggers](https://docs.symbolica.ai/references/python/agent_logger.md)
+- [Agentic Functions](https://docs.symbolica.ai/references/python/agentic.md)
+- [Agent](https://docs.symbolica.ai/references/python/agents.md)
+- [Templating](https://docs.symbolica.ai/references/python/templating.md)
+- [Token Usage](https://docs.symbolica.ai/references/python/usage.md)
+- [Agentic Functions](https://docs.symbolica.ai/references/ts/agentic.md)
+- [Agent](https://docs.symbolica.ai/references/ts/agents.md)
+- [Templating](https://docs.symbolica.ai/references/ts/templating.md)
+- [Token Usage](https://docs.symbolica.ai/references/ts/usage.md)

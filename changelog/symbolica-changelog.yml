@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.symbolica.ai/llms.txt
+product: Agentica SDK
+scheme: semver
+current_version: 0.4.0
+changelog_index: https://docs.symbolica.ai/llms.txt
+entries:
+  - version: 0.4.0
+    url: https://docs.symbolica.ai/changes/0.4.0.md
+    highlights:
+      - Wider variety of Python objects exchangeable between local Python session and agent REPLs (numpy.ndarray, pandas.DataFrame, sqlite3.Connection, whole modules).
+      - Objects warped by reference (in-place mutation reflected locally) or by value.
+      - New spawn options reasoning_effort and cache_ttl.
+      - Streaming/logging improvements (StreamLogger on_chunk callback, Chunk.type, ResponseUsage with cached/reasoning token stats).
+      - OpenAI/Anthropic models routed to native APIs, others via OpenRouter; 128-agent concurrency cap removed.
+    additions: true
+    breaking: false
+    licensing: Python SDK, TypeScript SDK, Agentica Server, and Internal Libraries relicensed to MIT.
+  - version: 0.3.2
+    url: https://docs.symbolica.ai/changes/0.3.2.md
+    highlights:
+      - Initial reasoning_effort parameter to control thinking budget on reasoning models.
+      - Multi-threaded support for the Python SDK (per-thread asyncio event loops).
+      - Thread-safety and race-condition fixes for concurrent agent spawning.
+    additions: true
+    breaking: false
+  - version: 0.3.1
+    url: https://docs.symbolica.ai/changes/0.3.1.md
+    highlights:
+      - Runtime updated to latest wasmtime for stability.
+      - Fixed random module virtualization.
+      - Clearer Python/TypeScript README examples; contact email updated to hello@symbolica.ai.
+    additions: true
+    breaking: false
+  - version: 0.3.0
+    url: https://docs.symbolica.ai/changes/0.3.0_release.md
+    highlights:
+      - First public release of the Agentica SDK.
+    additions: true
+    breaking: false

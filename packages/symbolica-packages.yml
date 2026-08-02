@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.symbolica.ai/quickstart
+packages:
+  - language: python
+    registry: pypi
+    name: symbolica-agentica
+    url: https://pypi.org/project/symbolica-agentica/
+    install: pip install symbolica-agentica
+    version: 0.4.1
+    import: agentica
+    repo: https://github.com/symbolica-ai/agentica-python-sdk
+    license: MIT
+    official: true
+    description: Official Python SDK for the Agentica agent framework from Symbolica.
+  - language: javascript
+    registry: npm
+    name: "@symbolica/agentica"
+    url: https://www.npmjs.com/package/@symbolica/agentica
+    install: npm add @symbolica/agentica
+    version: 0.4.1
+    repo: https://github.com/symbolica-ai/agentica-typescript-sdk
+    license: MIT
+    official: true
+    bin: agentica-setup
+    description: Official TypeScript/JavaScript SDK for the Agentica agent framework from Symbolica.
+notes: >-
+  Both first-party SDKs are versioned in lockstep (0.4.1). The npm package publishes an
+  `agentica-setup` bin used to scaffold TypeScript projects. Agentica is an SDK-first
+  platform (direct SDK integration, "Un-MCP") rather than a REST API; there is no public
+  OpenAPI-described HTTP surface.

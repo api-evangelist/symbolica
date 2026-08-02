@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.symbolica.ai/quickstart
+docs: https://docs.symbolica.ai/quickstart
+summary:
+  types: [apiKey]
+  api_key_in: [environment-variable]
+  oauth2_flows: []
+schemes:
+  - name: AgenticaApiKey
+    type: apiKey
+    in: environment-variable
+    scheme_detail: >-
+      Agentica Platform API key supplied to the SDK via an environment variable. The SDK
+      reads the key from the environment at runtime and authenticates to the Symbolica
+      Platform (inference, sandboxing, hosting, observability) on the developer's behalf.
+    env_vars:
+      - AGENTICA_API_KEY            # plain TS/JS, Python, and Bun
+      - NEXT_PUBLIC_AGENTICA_API_KEY # Next.js
+      - VITE_AGENTICA_API_KEY        # Vite + React
+    obtain: https://www.symbolica.ai/login
+    signup_credits: New accounts receive $50 in free inference credits.
+notes: >-
+  Agentica is an SDK-first platform; authentication is a single platform API key consumed by
+  the SDK rather than per-request HTTP auth headers documented on a REST surface. No OAuth2 /
+  OpenID Connect flows are published, so there is no scopes surface (scopes/ intentionally omitted).

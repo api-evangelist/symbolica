@@ -1,21 +1,48 @@
 aid: symbolica
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/symbolica.png
 name: Symbolica
-description: Symbolica is a company surfaced as a portfolio company of general-catalyst, khosla-ventures
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Symbolica is an AI research lab (founded 2022; backed by General Catalyst and Khosla
+  Ventures) applying category theory and type theory to build reasoning systems that go
+  beyond pattern matching. Its developer product is Agentica, a type-safe AI agent framework
+  and platform: the Agentica SDK (Python and TypeScript) lets LLM agents integrate directly
+  with your code — functions, classes, live objects, and modules — executing in a sandboxed
+  REPL, while the Symbolica Platform provides enterprise-scale inference, security,
+  sandboxing, hosting, management, and observability for agentic workloads. Agentica is
+  SDK-first ("Un-MCP"): it consumes external MCP servers as functions rather than exposing a
+  REST API.
 url: https://raw.githubusercontent.com/api-evangelist/symbolica/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - general-catalyst
 - khosla-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-developer-surface
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Artificial Intelligence
+- Agents
+- Agentic AI
+- SDK
+- Developer Tools
+- LLM
+- Machine Learning
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +52,46 @@ maintainers:
 common:
 - type: Website
   url: https://www.symbolica.ai/
+- type: DeveloperPortal
+  url: https://docs.symbolica.ai/
+- type: Documentation
+  url: https://docs.symbolica.ai/
+- type: APIReference
+  url: https://docs.symbolica.ai/references/python/agents
+- type: GettingStarted
+  url: https://docs.symbolica.ai/quickstart
+- type: Blog
+  url: https://www.symbolica.ai/blog
+- type: GitHubOrganization
+  url: https://github.com/symbolica-ai
+- type: Support
+  url: https://docs.symbolica.ai/guides/reporting-bugs
+- type: SignUp
+  url: https://www.symbolica.ai/login
+- type: TermsOfService
+  url: https://www.symbolica.ai/terms/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.symbolica.ai/terms/privacy-policy
+- type: LLMsTxt
+  url: llms/symbolica-llms.txt
+- type: Packages
+  url: packages/symbolica-packages.yml
+- type: SDKs
+  url: packages/symbolica-packages.yml
+- type: Authentication
+  url: authentication/symbolica-authentication.yml
+- type: Conventions
+  url: conventions/symbolica-conventions.yml
+- type: ChangeLog
+  url: changelog/symbolica-changelog.yml
+- type: ErrorCatalog
+  url: errors/symbolica-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/symbolica-lifecycle.yml
+- type: DomainSecurity
+  url: security/symbolica-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

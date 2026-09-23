@@ -1,0 +1,31 @@
+# Front Door AI Index — symbolica — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: symbolica
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.symbolica.ai
+  final_host: www.symbolica.ai
+  ownership: own
+  owner: symbolica
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 11
+  host_score: 11
+  density: 24.83
+  words: 443
+  tiers:
+    agentic: 0
+    core: 11
+    model: 0
+  ambiguous: 10
+  top_terms:
+    intelligence: 6
+    AI: 4
+    agent: 4
+    artificial intelligence: 4
+    deep learning: 1
+    large language model: 1
+    machine learning: 1
